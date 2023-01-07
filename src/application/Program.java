@@ -39,6 +39,12 @@ public class Program {
 					captured.add(capturedPiece);
 				}
 				
+				if (chessMatch.getPromoted() != null) {
+					System.out.println("Digite a inicial da peça que você quer: B = Bispo\nN = Cavalo\nR = Torre\nQ = Rainha: ");
+					String type = sc.nextLine();
+					chessMatch.replacePromotedPiece(type);
+				}
+				
 			}
 			catch (ChessException e) {
 				System.out.println(e.getMessage());
